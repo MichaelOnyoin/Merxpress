@@ -11,10 +11,10 @@ export const MerxCard: React.FC<MerxCardProps> = ({
   imageClassName = ""
 }) => {
   return (
-    <div className={`overflow-hidden pt-6 pl-10 bg-white rounded-2xl max-md:pl-5 ${className}`}>
+    <div className={`overflow-hidden pt-6 pl-10 bg-white rounded-2xl bg-blend-normal max-md:pl-5 ${className}`}>
       <div className="flex gap-1 max-md:flex-col">
         <div className="flex flex-col w-[50%] max-md:ml-0 max-md:w-full">
-          <div className="mt-5 text-4xl font-semibold text-gray-500 max-md:mt-10">
+          <div className="mt-5 text-4xl font-semibold text-gray-700 max-md:mt-10">
             {title}<span className="text-red-500">{titleSpan}</span>
           </div>
         </div>

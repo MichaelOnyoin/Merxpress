@@ -66,12 +66,12 @@ export const MerxDashboard: React.FC = () => {
   return (
     <MerxLayout>
       <div>
-      <div className="flex gap-5 max-md:flex-col">
+      <div className="flex gap-5 max-md:flex-col ">
         <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
           <div className="overflow-hidden grow pl-10 w-full bg-white rounded-2xl max-md:mt-5 max-md:max-w-full">
             <div className="flex gap-5 max-md:flex-col">
               <div className="flex flex-col w-[35%] max-md:ml-0 max-md:w-full">
-                <div className="mt-10 text-4xl font-semibold text-red-500">
+                <div className="mt-10 text-4xl font-semibold text-gray-600">
                   E-<span className="text-red-500">Marketplace</span>
                 </div>
               </div>
@@ -80,17 +80,17 @@ export const MerxDashboard: React.FC = () => {
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/95ffaf49092aefcaf7fdcdbf2f8f4dddbfca8422e2c73d9912ceb94b4318a7d8?placeholderIfAbsent=true&apiKey=2c0ef7d7caa24d8d8c04d3962010fc58"
                   alt="E-Marketplace illustration"
-                  className="object-contain grow w-full aspect-[1.52] max-md:mt-10 max-md:max-w-full"
+                  className="object-contain grow w-full aspect-[1.52] max-md:mt-10 max-md:max-w-full background"
                 />
               </div>
             </div>
           </div>
         </div>
-        <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+        <div className="flex flex-col ml-2 w-6/12 max-md:ml-0 max-md:w-full">
           <MerxCard {...cardData[1]} />
         </div>
       </div>
-      <div className="mt-5 w-full max-w-[1720px] max-md:max-w-full">
+      <div className="mt-3 w-full  max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           {[...Array(4)].map((_, index) => (
             <div key={index} className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
