@@ -7,7 +7,7 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -18,4 +18,24 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.fill{
+  color: #ffffff;
+}
+
+.results {
+  display: inline-block;
+}
+
+.resultOptions {
+  position: relative;
+  display: block;
+  width: 80%;
+}
+
+.resultOptions .i {
+  position: relative;
+  padding: 5px;
+  margin-top: -120px;
 }
