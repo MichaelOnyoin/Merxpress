@@ -5,8 +5,9 @@
 import { Header } from "@/components/Header";
 import { Page } from "@/components/Hero1";
 import { MerxLayout } from "@/components/merxDash";
-//import { MerxDashboard } from "@/components/merxDash";
+import { Mid } from "@/components/MidSection";
 import { Dash } from "@/components/Dashboard";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -21,6 +22,8 @@ export default function Home() {
         {/* <MerxDashboard/> */}
         <Dash/>
       </MerxLayout>
+      <Mid/>
+      <Footer/>
 
 
     </div>

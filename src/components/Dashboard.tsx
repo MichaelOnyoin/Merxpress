@@ -9,7 +9,7 @@ export const Dash = () => {
             </div>
             <img src="dash2.png" alt="Various products" className="w-24 h-24 object-cover" style={{height:'100%', width:'50%',borderRadius:'16px'}}/>
             </div>
-            <div className="bg-white p-0 rounded-2xl flex justify-between col-span-1 sm:col-span-2">
+            <div className="bg-white p-0 hover:shadow-md rounded-2xl flex justify-between col-span-1 sm:col-span-2">
                 <div className="text-2xl font-semibold p-4 ">
                     Sell on <span className="text-red-600">Merxpress</span>
                 </div>
@@ -21,7 +21,7 @@ export const Dash = () => {
                 <div className="text-2xl font-semibold p-4">
                     Merx<span className="text-red-600">Assist</span>
                 </div>
-                <img src="https://placehold.co/100x100" alt="Robot assistant" className="w-24 h-24 object-cover" />
+                <img src="robo.png" alt="Robot assistant" className="w-24 h-24 object-cover self-end" style={{height:'55%', width:'42%',borderRadius:'16px'}} />
             </div>
             <div className="bg-white p-0 rounded-2xl hover:shadow-md flex justify-between">
                 <div className="text-2xl font-semibold p-4">
@@ -41,11 +41,11 @@ export const Dash = () => {
                 </div>
                 <img src="https://placehold.co/100x100" alt="Hands planting a seedling" className="w-24 h-24 object-cover"/>
             </div>
-            <div className="bg-white p-4 rounded-2xl hover:shadow-md flex justify-between">
-                <div className="text-2xl font-semibold">
+            <div className="bg-white p-0 rounded-2xl hover:shadow-md flex justify-between">
+                <div className="text-2xl font-semibold p-4">
                     Merx <span className="text-red-600">E-Hub</span>
                 </div>
-                <img src="https://placehold.co/100x100" alt="Globe" className="w-24 h-24 object-cover"/>
+                <img src="globe.png" alt="Globe" className="w-24 h-24 object-cover self-end" style={{height:'90%', width:'40%',borderRadius:'16px'}}/>
             </div>
             <div className="bg-white p-4 rounded-2xl hover:shadow-md flex justify-between">
                 <div className="text-2xl font-semibold">
