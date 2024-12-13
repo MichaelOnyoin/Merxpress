@@ -34,15 +34,19 @@ export const Mid = () => {
                                 <p className="text-gray-600">If your delivered product does not match the description, you can return the product and get your money back</p>
                             </div>
                         </div>
-                     <div className='flex-1 items-start space-x-6'>
-                      
-                     </div>     
+                        <div className='flex flex-col items-start space-x-3 md:flex-row invisible'>
+                            <div>
+                                <h3 className="text-lg font-semibold text-gray-800">Moneyback Guarantee</h3>
+                                <p className="text-gray-600">If your delivered product does not match the description, you can return the product and get your money back</p>
+                            </div>
+
+                        </div>
                     </div>
                   
                 </div>
                 
-                <div className="flex-shrink-0">
-                    <img src="unsplash_laptopguy.png" alt="Person holding a laptop and smiling" className="absolute right-0 translate-y-[-40%]" style={{height:'300px', width:'400px'}}/>
+                <div className="flex-shrink-0 ">
+                    <img src="unsplash_laptopguy.png" alt="Person holding a laptop and smiling" className="absolute right-0 translate-y-[-40%]" style={{height:'340px', width:'430px'}}/>
                     
                 </div>
             </div>

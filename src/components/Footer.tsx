@@ -11,7 +11,7 @@ export const Footer = () => {
                         </h1>
                     </div>
                     <div className="flex flex-col md:flex-row justify-between w-full md:w-auto">
-                        <div className="mb-6 md:mb-0 md:mr-8">
+                        <div className="mb-6 md:mb-0 md:mr-8 text-xl">
                             <h2 className="text-gray-400 mb-2">Connect With Us</h2>
                             <ul>
                                 <li className="mb-1"><a href="#" className="text-white hover:underline">Facebook</a></li>
@@ -20,7 +20,7 @@ export const Footer = () => {
                                 <li className="mb-1"><a href="#" className="text-white hover:underline">Instagram</a></li>
                             </ul>
                         </div>
-                        <div className="mb-6 md:mb-0 md:mr-8">
+                        <div className="mb-6 md:mb-0 md:mr-8 text-xl">
                             <h2 className="text-gray-400 mb-2">About Merxpress</h2>
                             <ul>
                                 <li className="mb-1"><a href="#" className="text-white hover:underline">About Us</a></li>
@@ -30,7 +30,7 @@ export const Footer = () => {
                                 <li className="mb-1"><a href="#" className="text-white hover:underline">Merxpress Express</a></li>
                             </ul>
                         </div>
-                        <div className="mb-6 md:mb-0 md:mr-8">
+                        <div className="mb-6 md:mb-0 md:mr-8 text-xl">
                             <h2 className="text-gray-400 mb-2">Customer Service</h2>
                             <ul>
                                 <li className="mb-1"><a href="#" className="text-white hover:underline">Terms & Conditions</a></li>
@@ -40,8 +40,8 @@ export const Footer = () => {
                                 <li className="mb-1"><a href="#" className="text-white hover:underline">Report a Product</a></li>
                             </ul>
                         </div>
-                        <div>
-                            <h2 className="text-gray-400 mb-2">Payment</h2>
+                        <div className="text-xl">
+                            <h2 className="text-gray-400 mb-2 ">Payment</h2>
                             <ul>
                                 <li className="mb-1"><a href="#" className="text-white hover:underline">Payment on Delivery</a></li>
                                 <li className="mb-1 flex items-center">
