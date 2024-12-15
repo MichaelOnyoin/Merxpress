@@ -1,3 +1,4 @@
+'use client'
 import * as React from "react";
 import { ItemCard } from "./ItemCard";
 import {
@@ -8,6 +9,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import { ProductData } from "@/components/popularItems/types";
+import Autoplay from "embla-carousel-autoplay";
 
 const products: ProductData[] = [
     // ... (your existing product data)
@@ -74,14 +76,25 @@ const products: ProductData[] = [
 ];
 
 export const ItemDisplay: React.FC = () => {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
     return (
         <div className="flex flex-col mt-4 w-full max-md:mt-10 max-md:max-w-full">
             <h1 className="text-2xl font-bold mb-6 text-slate-900 max-md:max-w-full">Popular Items</h1>
             <Carousel
-            opts={{
-                align: "start",
-              }}
-              className="w-full max-w-screen"
+              // plugins={[
+              //   Autoplay({
+              //     delay: 2000,
+              //   }),
+              // ]}
+              plugins={[plugin.current]}
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.reset}
+              opts={{
+                  align: "start",
+                }}
+                className="w-full max-w-screen"
             >
                 <CarouselPrevious>
                     <button className="text-slate-900">Previous</button>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export const Dash = () => {
     return (
@@ -13,8 +14,9 @@ export const Dash = () => {
                 <div className="text-2xl font-semibold p-4 ">
                     Sell on <span className="text-red-600">Merxpress</span>
                 </div>
-                <img src="dash1.png" alt="Various products" className="w-24 h-24 object-cover" style={{height:'100%', width:'50%',borderRadius:'16px'}}/>
                 
+                <img src="dash1.png" alt="Various products" className="w-24 h-24 object-cover" style={{height:'100%', width:'50%',borderRadius:'16px'}}/>
+                {/* <Image loading='lazy' src={'/dash1.png'} alt='Various products' height={100} width={100} className='object-cover w-[50%] h-full rounded-2xl'/> */}
             </div>
             
             <div className="bg-white p-0 rounded-2xl hover:shadow-md flex justify-between row-span-2">
@@ -22,6 +24,7 @@ export const Dash = () => {
                     Merx<span className="text-red-600">Assist</span>
                 </div>
                 <img src="robo.png" alt="Robot assistant" className="w-24 h-24 object-cover self-end" style={{height:'55%', width:'42%',borderRadius:'16px'}} />
+                {/* <Image loading='lazy' src={'/robo.png'} alt='Robot Assistant' height={24} width={24} className='object-cover h-[55%] w-[45%] rounded-2xl'/> */}
             </div>
             <div className="bg-white p-0 rounded-2xl hover:shadow-md flex justify-between">
                 <div className="text-2xl font-semibold p-4">
