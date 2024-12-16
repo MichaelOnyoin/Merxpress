@@ -32,11 +32,11 @@ export const Dash = () => {
                 </div>
                 <img src="pay.png" alt="Payment cards" className="w-24 h-24 object-cover"  style={{height:'100%', width:'50%',borderRadius:'16px'}}/>
             </div>
-            <div className="bg-white p-4 rounded-2xl hover:shadow-md flex justify-between row-span-2">
-                <div className="text-2xl font-semibold">
+            <div className="bg-white p-0 rounded-2xl hover:shadow-md flex justify-between row-span-2">
+                <div className="text-2xl p-4 font-semibold">
                     Merx<span className="text-red-600">Estates</span>
                 </div>
-                <img src="https://placehold.co/100x100" alt="Buildings" className="w-24 h-24 object-cover"/>
+                <img src="estates.png" alt="Buildings" className=" object-cover rounded-e-lg self-end" style={{height:'40%', width:'38%'}}/>
             </div>
             <div className="bg-white p-4 rounded-2xl hover:shadow-md flex justify-between">
                 <div className="text-2xl font-semibold">
@@ -78,7 +78,7 @@ export const Dash = () => {
                 <div className="text-2xl font-semibold">
                     Merx<span className="text-red-600">Clips</span>
                 </div>
-                <img src="https://placehold.co/100x100" alt="Television" className="w-24 h-24 object-cover"/>
+                <img src="clips.png" alt="Television" className="w-24 h-24 object-cover" style={{height:'100%'}}/>
             </div>
         </div>
     );
