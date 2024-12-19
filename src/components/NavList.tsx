@@ -3,12 +3,12 @@ import { ChevronRight } from "lucide-react";
 
 export const NavList=()=>{
     return(
-        <nav className="flex flex-wrap gap-2 mb-8 justify-left items-center text-sm my-auto self-stretch font-bold text-slate-900 mr-2">
+        <nav className="flex flex-wrap gap-2 mb-8 justify-left items-center text-sm my-auto self-stretch font-bold text-slate-800 mr-2">
             <button className="mt-4 pr-6 pl-6 py-3 bg-red-500 text-white ml-2 rounded-lg mr-6 ">Catalog</button>
             {/* <div className="mt-6 pr-6 pl-6 pr-6 py-3 bg-red-500 text-white ml-2 rounded-lg" role="button" aria-label="Catalog">Catalog</div> */}
             <ul className="">
                 <div className="dropdown ">
-                <li className="px-2 self-start hover:text-red-500"><a href="#">Sell on Merxpress</a></li>
+                <li className="px-2 self-start hover:text-red-500"><a href="/marketplace/sell">Sell on Merxpress</a></li>
                     <div className="dropdown-content">
                         <li className=""><a href="#" className="">African Products <ChevronRight className="h-6 w-6 inline-block ml-28 " href="null" strokeWidth={1.5} fill="none"/></a>
                         {/* <div className="dropdown-content">

@@ -45,8 +45,8 @@ export const Footer = () => {
                             <ul>
                                 <li className="mb-1"><a href="#" className="text-white hover:underline">Payment on Delivery</a></li>
                                 <li className="mb-1 flex items-center">
-                                    <img src="visa.png" alt="Visa logo" className="mr-2 rounded-sm" style={{height:'20px', width:'30px'}}/>
-                                    <img src="master.png" alt="Mastercard log" className="rounded-sm" style={{height:'20px', width:'30px'}}/>
+                                    <img src="https://res.cloudinary.com/dbfydxolq/image/upload/v1734591670/visa_da0pl7.png" alt="Visa logo" className="mr-2 rounded-sm" style={{height:'20px', width:'30px'}}/>
+                                    <img src="https://res.cloudinary.com/dbfydxolq/image/upload/v1734592637/master_lnsjrm.png" alt="Mastercard log" className="rounded-sm" style={{height:'20px', width:'30px'}}/>
                                    
                                 </li>
                                 <li className="mb-1"><a href="#" className="text-white hover:underline">Merx Cash</a></li>

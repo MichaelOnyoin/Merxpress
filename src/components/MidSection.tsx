@@ -9,7 +9,7 @@ export const Mid = () => {
                     <h2 className="text-2xl font-bold text-gray-800 mb-4">Why Choosing Merxpress?</h2>
                     <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6">
                         <div className="flex items-start space-x-3">
-                            <Image src={'icons/timer-outline.svg'} alt='Timer' height={20} width={20}/>
+                            <Image src={'/icons/timer-outline.svg'} alt='Timer' height={20} width={20}/>
                            
                             <div>
                                 <span>
@@ -21,14 +21,14 @@ export const Mid = () => {
                         </div>
                         <div className="flex items-start space-x-3">
                            
-                            <Image src={'icons/headset-outline.svg'} alt='Headset' height={20} width={20} className=''/>
+                            <Image src={'/icons/headset-outline.svg'} alt='Headset' height={20} width={20} className=''/>
                             <div>
                                 <h3 className="text-lg font-semibold text-gray-800">24/7 Tech Support</h3>
                                 <p className="text-gray-600">We are always ready to help our customers whenever they need assistance using our website</p>
                             </div>
                         </div>
                         <div className="flex items-start space-x-3 ">
-                        <Image src={'icons/cash-outline.svg'} alt='Cash' height={20} width={20}/>
+                        <Image src={'/icons/cash-outline.svg'} alt='Cash' height={20} width={20}/>
                             <div>
                                 <h3 className="text-lg font-semibold text-gray-800">Moneyback Guarantee</h3>
                                 <p className="text-gray-600">If your delivered product does not match the description, you can return the product and get your money back</p>
@@ -46,7 +46,7 @@ export const Mid = () => {
                 </div>
                 
                 <div className="flex-shrink-0 ">
-                    <img src="unsplash_laptopguy.png" alt="Person holding a laptop and smiling" className="absolute right-0 translate-y-[-40%]" style={{height:'340px', width:'430px'}}/>
+                    <img src="https://res.cloudinary.com/dbfydxolq/image/upload/v1734591564/unsplash_laptopguy_x0jcko.png" alt="Person holding a laptop and smiling" className="absolute right-0 translate-y-[-40%]" style={{height:'340px', width:'430px'}}/>
                     
                 </div>
             </div>

@@ -8,7 +8,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel";
-import { ProductData } from "@/components/popularItems/types";
+import { ProductData } from "@/db/definitions";
 import Autoplay from "embla-carousel-autoplay";
 
 const products: ProductData[] = [
@@ -18,7 +18,8 @@ const products: ProductData[] = [
         price: 379.00,
         title: "Nintendo Switch™ Mario Kart™ 8 Deluxe Bundle",
         description: "Full Game Download + 3 Mo. Nintendo Switch Online Membership Included",
-        imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/4357e4576d07360a680141b648322792c7db4c075130df9a3cf3dfe428119e83?apiKey=2c0ef7d7caa24d8d8c04d3962010fc58&"
+        //imageUrl: `https://cdn.builder.io/api/v1/image/assets/TEMP/4357e4576d07360a680141b648322792c7db4c075130df9a3cf3dfe428119e83?apiKey=2c0ef7d7caa24d8d8c04d3962010fc58&`
+        imageUrl:'images/nintendo.png'
       },
       {
         id: "2",
@@ -83,11 +84,6 @@ export const ItemDisplay: React.FC = () => {
         <div className="flex flex-col mt-4 w-full max-md:mt-10 max-md:max-w-full">
             <h1 className="text-2xl font-bold mb-6 text-slate-900 max-md:max-w-full">Popular Items</h1>
             <Carousel
-              // plugins={[
-              //   Autoplay({
-              //     delay: 2000,
-              //   }),
-              // ]}
               plugins={[plugin.current]}
               onMouseEnter={plugin.current.stop}
               onMouseLeave={plugin.current.reset}
