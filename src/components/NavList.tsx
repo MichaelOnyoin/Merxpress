@@ -48,7 +48,7 @@ export const NavList=()=>{
                     </div>
                 </div>
                 <div className="dropdown ">
-                <li className="px-2 hover:text-red-500"><a href="#">MerxPay</a></li>
+                <li className="px-2 hover:text-red-500"><a href="/merxpay">MerxPay</a></li>
                     <div className="dropdown-content">
                         <li><a href="#">PayPal</a></li>
                         <li><a href="#">Mpesa</a></li>
