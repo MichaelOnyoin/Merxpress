@@ -27,6 +27,8 @@ export const Catalog = () => {
                             <input type="text" className="border rounded p-1 w-1/2 mr-2"  defaultValue={0} />
                             <input type="text" className="border rounded p-1 w-1/2 "
                              value={`$${value}`}
+                               
+                             
                              />
                         </div>
                         <input type="range" className="w-full accent-red-500"

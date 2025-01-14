@@ -1,7 +1,7 @@
 'use client'
 import * as React from "react";
 import { Heart, CirclePlus } from "lucide-react";
-import { Product, ProductCardProps } from "@/db/definitions";
+import { ProductCardProps } from "@/db/definitions";
 import { useCart } from "./CartContext";
 import CustomAlert from "./CustomAlert";
 
@@ -26,8 +26,9 @@ export const ItemCard: React.FC<ProductCardProps>=({
         //make the alert message appear for only 2 seconds ?
     }
     
-    const handleAddToCartClick = (product: Product) => {
-        addToCart(product);
+    const handleAddToCartClick = () => {
+        addToCart({ price, originalPrice, discount, title, description, imageUrl, id: "" });
+        alert("Item added to cart");
     };
 
     
@@ -66,10 +67,7 @@ export const ItemCard: React.FC<ProductCardProps>=({
                     <h2 className="text-lg  mb-2 text-slate-900">{title}</h2>
                     <p className="text-gray-500 leading-7">{description}</p>
                     <CirclePlus className=' h-5 stroke-gray-800 mr-2 absolute bottom-4 right-0 hover:fill-blue-500 hover:stroke-white' strokeWidth={1.0} fill='none' href='null' role="button"
-                      onClick={() => handleAddToCartClick({
-                          price, title, description, imageUrl,
-                          id: ""
-                      })}
+                      onClick={handleAddToCartClick}
                      />
             </div>
         

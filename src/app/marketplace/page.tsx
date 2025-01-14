@@ -8,14 +8,14 @@ import { MerxLayout } from "@/components/merxDash";
 import { Items } from "@/components/Items";
 import { ItemDisplay } from "@/components/Display";
 import { NavList } from "@/components/NavList";
-
+import { CartProvider } from "@/components/cart/CartContext";
 
 export default function Market(){
     return(
         <div>
+            <CartProvider>
             <Header/>
             <NavList/>
-            {/* <Navigation/> */}
             <ProductGallery/>
             <MerxLayout>              
                 <Items/>
@@ -24,6 +24,7 @@ export default function Market(){
             
             <Mid/>
             <Footer/>
+            </CartProvider>
 
         </div>
     )

@@ -3,33 +3,40 @@ import { ItemCard } from "./ItemCard";
 import { ProductData } from "@/db/definitions";
 //import { getProducts } from "@/db/data";
 //import { Product } from "@/db/definitions";
-import { CartProvider } from "./CartContext";
+//import { CartProvider } from "./CartContext";
+import Cart from "@/components/cart/Cart";
+
 export const Items: React.FC = async () => {
 
   //const products: ProductData[] =  await getProducts();
   
   return (
+    
     <div className="flex flex-col mt-4 w-full max-md:mt-10 max-md:max-w-full">
       <h1 className="text-2xl font-bold mb-6 text-slate-900 max-md:max-w-full">
         Promotions
       </h1>
       <div className="flex flex-col mt-2">
-        <CartProvider>
+        
         <div className="flex flex-row mb-4">
           {products.slice(0, 4).map((product) => (
             <ItemCard key={product.id} {...product} />
           ))}
         </div>
-        </CartProvider>
+        
       </div>
       <div className="flex flex-col mt-2">
         <div className="flex flex-row mb-4">
           {products.slice(4).map((product) => (
             <ItemCard key={product.id} {...product} />
+            
           ))}
+          <Cart/>
         </div>
       </div>
+      
     </div>
+    
   );
 };
 
