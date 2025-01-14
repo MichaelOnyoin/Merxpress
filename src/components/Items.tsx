@@ -4,7 +4,7 @@ import { ProductData } from "@/db/definitions";
 //import { getProducts } from "@/db/data";
 //import { Product } from "@/db/definitions";
 //import { CartProvider } from "./CartContext";
-import Cart from "@/components/cart/Cart";
+//import Cart from "@/components/Cart";
 
 export const Items: React.FC = async () => {
 
@@ -31,7 +31,7 @@ export const Items: React.FC = async () => {
             <ItemCard key={product.id} {...product} />
             
           ))}
-          <Cart/>
+         
         </div>
       </div>
       
