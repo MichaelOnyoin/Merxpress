@@ -90,5 +90,26 @@ body {
   background-repeat: no-repeat; /* Optional: prevents the image from repeating */
   background-position: center;
   height: 400px;
+  
+}
+
+.foundation{
   border: none;
+  background-image: url('/merx-foundation.png'); /* Adjust the path as necessary */
+   /* background-size: cover; Optional: makes the background cover the entire area */
+  background-repeat: no-repeat; /* Optional: prevents the image from repeating */
+  background-position: right;
+  align-self: 'self-end';
+  height: 205px;
+}
+
+.estate{
+  border: none;
+  background-image: url('/estates.png'); /* Adjust the path as necessary */
+   /* background-size: cover; Optional: makes the background cover the entire area */
+  background-repeat: no-repeat; /* Optional: prevents the image from repeating */
+  background-position: bottom;
+  align-self: 'self-end';
+  align-items: right;
+  height: 330px;
 }

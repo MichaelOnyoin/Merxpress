@@ -1,11 +1,16 @@
 'use client'
 import React from "react";
 import { useState } from "react";
-
+// import { ItemCard } from "./ItemCard";
+// import { DataCard } from "./DataCard";
+// import { DataCardProps } from "@/db/definitions";
+// import {products} from '@/db/dummy'
 
 export const Catalog = () => {
     const price:number=0;
-    const [value, setValue] = useState(price || 1000)
+    const [value, setValue] = useState(price || 1000);
+   // const items : DataCardProps[]= products ;
+
 
     function onSliderChange(e: React.ChangeEvent<HTMLInputElement>) {
         const newValue = Number(e.target.value)
@@ -179,6 +184,16 @@ export const Catalog = () => {
                                 <i className="far fa-heart"></i>
                             </button>
                         </div>
+                        {/* <div className="flex flex-col mt-2">
+                                
+                                <div className="flex flex-row mb-4">
+                                  {items.slice(0, 4).map((product) => (
+                                    <DataCard key={product.id} {...product} />
+                                  ))}
+                                </div>
+                                
+                              </div> */}
+
                         <div className="bg-white rounded-lg shadow-md p-4 relative">
                             <img src="https://placehold.co/300x200" alt="Whetstone 1000 6000 Grit Kitchen Knife Sharpening Stones" className="w-full h-40 object-cover mb-4" />
                             <div className="flex justify-between items-center mb-2">

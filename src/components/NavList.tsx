@@ -1,10 +1,13 @@
+'use client'
 import React from "react";
 import { ChevronRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export const NavList=()=>{
+    const router = useRouter();
     return(
         <nav className="flex flex-wrap gap-2 mb-8 justify-left items-center text-sm my-auto self-stretch font-bold text-slate-800 mr-2">
-            <button className="mt-4 pr-6 pl-6 py-3 bg-red-500 text-white ml-2 rounded-lg mr-6 ">Catalog</button>
+            <button className="mt-4 pr-6 pl-6 py-3 bg-red-500 text-white ml-2 rounded-lg mr-6" onClick={()=>router.push('/marketplace/sell')}>Catalog</button>
             {/* <div className="mt-6 pr-6 pl-6 pr-6 py-3 bg-red-500 text-white ml-2 rounded-lg" role="button" aria-label="Catalog">Catalog</div> */}
             <ul className="">
                 <div className="dropdown ">

@@ -24,7 +24,19 @@ export interface ProductCardProps {
     title: string;
     description: string;
     imageUrl: string;
+    like?:number;
   }
+
+export interface DataCardProps{
+  title: string; // title of product
+  category: string; // category of product
+  price: number; // price of product in INR
+  imgs?:  string ; // array of images of product
+  specs?: [string, string]; // Array or String of specs of product -> If Array, then render as list else if String, then render as single line
+  inStock: number; // quantity in stock of product -> If 0, then hide from the store, or less than 10, then show a "Very few left" or play with this value
+  eta: number; // estimated time of arrival of product in mins
+  id: number; 
+}
   
 export interface ProductData {
     id: string;

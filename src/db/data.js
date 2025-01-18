@@ -161,7 +161,7 @@ const categories = {
 };
 
 // Products
-const products = [
+export const products = [
   {
     Brand: "Redmi",
     RAM: "2 GB", // filters

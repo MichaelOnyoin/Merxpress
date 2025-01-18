@@ -17,7 +17,7 @@ export const ProductGallery: React.FC = () => {
       <ProductImage
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/148ac3efceb707e4f9b8fc7204f5a6a03a046e9d6fea6379b04b0add498543e4?apiKey=2c0ef7d7caa24d8d8c04d3962010fc58&"
         alt="Featured product"
-        className="object-contain shrink-0 self-stretch my-auto aspect-[1.38] min-w-[240px] w-[415px] "
+        className="object-contain shrink-0 self-stretch my-auto aspect-[1.38] min-w-[240px] w-[415px] hover:scale-105 transition-transform duration-300 ease-in-out"
       />
       
       {productData.map((product, index) => (
@@ -33,7 +33,7 @@ export const ProductGallery: React.FC = () => {
       <ProductImage
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/7381d17bd354a6e0e212c89bc1a920a1ddf43769727de7f5ceda0600d46da13f?apiKey=2c0ef7d7caa24d8d8c04d3962010fc58&"
         alt="Additional product"
-        className="object-contain shrink-0 self-stretch my-auto aspect-[1.38] min-w-[240px] w-[415px]"
+        className="object-contain shrink-0 self-stretch my-auto aspect-[1.38] min-w-[240px] w-[415px] hover:scale-105 transition-transform duration-300 ease-in-out"
       />
       
       <div className="flex shrink-0 self-stretch my-auto h-[100px] min-w-[240px] w-[415px]" />

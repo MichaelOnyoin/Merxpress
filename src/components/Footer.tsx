@@ -1,13 +1,15 @@
 import React from "react";
 
 export const Footer = () => {
+    const currentYear = new Date().getFullYear();
     return (
-        <footer className="text-sm py-8 bg-gray-900">
+        <footer className="text-sm py-8 bg-[#011627]">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
                     <div className="mb-6 md:mb-0">
                         <h1 className="text-4xl font-bold text-white">
-                            <span className="text-white">Merx</span><span className="text-red-500">press</span>
+                            {/* <span className="text-white">Merx</span><span className="text-red-500">press</span> */}
+                            <img src="merxpressLogo.svg" alt=""  />
                         </h1>
                     </div>
                     <div className="flex flex-col md:flex-row justify-between w-full md:w-auto">
@@ -55,10 +57,10 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className="border-t border-gray-700 mt-8 pt-4 text-center">
-                    <p className="text-gray-400">&copy; All Rights Reserved. 2024, Merxpress.com, Inc. or its affiliates</p>
+                    <p className="text-gray-400">&copy; All Rights Reserved. {currentYear}, Merxpress.com, Inc. or its affiliates</p>
                     <div className="flex justify-center space-x-4 mt-2">
-                        <a href="#" className="text-white hover:underline">Conditions of Use</a>
-                        <a href="#" className="text-white hover:underline">Privacy Notice</a>
+                        <a href="#" className="flex text-white hover:underline">Conditions of Use</a>
+                        <a href="#" className="flex text-white hover:underline">Privacy Notice</a>
                     </div>
                 </div>
             </div>

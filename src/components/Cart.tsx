@@ -17,7 +17,8 @@ const Cart: React.FC = () => {
             <li key={item.product.id}>
               <div>
                 <h3>{item.product.title}</h3>
-                <p>Price: ${item.product.price}</p>
+                <img src={`${item.product.imageUrl}`} alt="" className='h-44 w-44 ' />
+                <p className='text-lg text-slate-700'>Price: ${item.product.price}</p>
                 <p>Quantity: {item.quantity}</p>
                 <button className='bg-red-500 rounded-lg text-white px-4' onClick={() => removeFromCart(parseInt(item.product.id))}>Remove</button>
                 <button className='text-green-500 px-4 ' onClick={() => updateCartItemQuantity(parseInt(item.product.id), item.quantity + 1)}>+</button>
