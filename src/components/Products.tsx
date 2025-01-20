@@ -1,8 +1,9 @@
 import * as React from "react";
-import { ItemCard } from "./ItemCard";
+import { ProductCard } from "./ProductCard";
 import { ProductData } from "@/db/definitions";
 
-export const Items: React.FC = async () => {
+
+export const Products: React.FC = async () => {
 
   //const products: ProductData[] =  await getProducts();
   
@@ -15,17 +16,16 @@ export const Items: React.FC = async () => {
       <div className="flex flex-col mt-2">
         
         <div className="flex flex-row mb-4">
-          {products.slice(0, 4).map((product) => (
-            <ItemCard key={product.id} product={product} />
+        {products.slice(0, 4).map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
         
       </div>
       <div className="flex flex-col mt-2">
         <div className="flex flex-row mb-4">
-          {products.slice(4).map((product) => (
-            <ItemCard key={product.id} product={product} />
-            
+        {products.slice(0, 4).map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
           
          

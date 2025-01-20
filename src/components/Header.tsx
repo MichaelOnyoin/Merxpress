@@ -4,7 +4,7 @@ import React from 'react'
 import { Settings, ShoppingCart, CircleUserRound, Mic, Search } from 'lucide-react'
 //import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 // import { useDebouncedCallback} from 'use-debounce'
- import { useCart } from './CartContext';
+ import { useCart } from '@/components/cart/CartContext';
 
 export const Header=()=>{
 

@@ -1,8 +1,8 @@
 'use client'
 import React from 'react';
-import { CartProvider } from '@/components/CartContext';
+import { CartProvider } from '@/components/cart/CartContext';
 //import { Items } from '@/components/Items';
-import Cart from '@/components/Cart';
+import Cart from '@/components/cart/Cart';
 
 const App: React.FC = () => {
   return (

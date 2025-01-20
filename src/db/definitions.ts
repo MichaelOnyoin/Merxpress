@@ -15,16 +15,18 @@ export type Product = {
     title: string;
     description: string;
     imageUrl: string;
+    //liked?:boolean;
   };
 
 export interface ProductCardProps {
+    id: string;
     price: number;
     originalPrice?: number;
     discount?: number;
     title: string;
     description: string;
     imageUrl: string;
-    like?:number;
+    //liked?:boolean;
   }
 
 export interface DataCardProps{
@@ -46,6 +48,7 @@ export interface ProductData {
     title: string;
     description: string;
     imageUrl: string;
+    liked?:boolean;
   }
   
   export type CartItem = {

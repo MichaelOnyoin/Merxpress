@@ -6,7 +6,7 @@ export const Mid = () => {
         <div className="container mx-auto bg-white  flex justify-center items-center min-h-screen bg-gray-100">
             <div className="bg-indigo-200 rounded-lg p-8 flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-6 max-w-6xl">
                 <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-4">Why Choosing Merxpress?</h2>
+                    <h2 className="text-2xl font-bold text-gray-800 mb-4">Why Choose Merxpress?</h2>
                     <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6">
                         <div className="flex items-start space-x-3">
                             <Image src={'/icons/timer-outline.svg'} alt='Timer' height={20} width={20}/>
@@ -46,8 +46,9 @@ export const Mid = () => {
                 </div>
                 
                 <div className="flex-shrink-0 ">
-                    <img src="https://res.cloudinary.com/dbfydxolq/image/upload/v1734591564/unsplash_laptopguy_x0jcko.png" alt="Person holding a laptop and smiling" className="absolute right-0 translate-y-[-40%]" style={{height:'340px', width:'430px'}}/>
-                    
+                    <img src="https://res.cloudinary.com/dbfydxolq/image/upload/v1734591564/unsplash_laptopguy_x0jcko.png" alt="Person holding a laptop and smiling" className="absolute right-0 translate-y-[-40%]" style={{height:'380px', width:'480px'}}/>
+                    {/* <Image src="https://res.cloudinary.com/dbfydxolq/image/upload/v1734591564/unsplash_laptopguy_x0jcko.png" alt="Person holding a laptop and smiling" className="absolute right-0 translate-y-[-40%]" height={700} width={450}/> */}
+                    {/* <Image src="/unsplash_laptopguy.png" alt="Person holding a laptop and smiling" className="absolute right-0 translate-y-[-40%]" height={900} width={450}/> */}
                 </div>
             </div>
         </div>

@@ -99,7 +99,7 @@ export const ItemDisplay: React.FC = () => {
                 <CarouselContent className="">
                     {products.map((product) => (
                         <CarouselItem key={product.id} className="md:basis-1/2 lg:basis-1/4 flex flex-row mb-4">
-                            <ItemCard {...product} />
+                            <ItemCard product={product} />
                         </CarouselItem>
                     ))}
                 </CarouselContent>

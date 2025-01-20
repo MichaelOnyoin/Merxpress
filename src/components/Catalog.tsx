@@ -1,17 +1,14 @@
 'use client'
 import React from "react";
 import { useState } from "react";
-// import { ItemCard } from "./ItemCard";
-// import { DataCard } from "./DataCard";
-// import { DataCardProps } from "@/db/definitions";
-// import {products} from '@/db/dummy'
+import { Products } from "@/components/Products";
+import { CartProvider } from "@/components/cart/CartContext";
+import CartPage from "@/components/cart/Cart";
 
-export const Catalog = () => {
+export const Catalog: React.FC = () => {
     const price:number=0;
     const [value, setValue] = useState(price || 1000);
-   // const items : DataCardProps[]= products ;
-
-
+   
     function onSliderChange(e: React.ChangeEvent<HTMLInputElement>) {
         const newValue = Number(e.target.value)
         setValue(newValue)
@@ -184,15 +181,7 @@ export const Catalog = () => {
                                 <i className="far fa-heart"></i>
                             </button>
                         </div>
-                        {/* <div className="flex flex-col mt-2">
-                                
-                                <div className="flex flex-row mb-4">
-                                  {items.slice(0, 4).map((product) => (
-                                    <DataCard key={product.id} {...product} />
-                                  ))}
-                                </div>
-                                
-                              </div> */}
+                        
 
                         <div className="bg-white rounded-lg shadow-md p-4 relative">
                             <img src="https://placehold.co/300x200" alt="Whetstone 1000 6000 Grit Kitchen Knife Sharpening Stones" className="w-full h-40 object-cover mb-4" />
@@ -204,6 +193,13 @@ export const Catalog = () => {
                             <button className="absolute top-2 right-2 text-red-500">
                                 <i className="far fa-heart"></i>
                             </button>
+                        </div>
+                        <div className="flex flex-row w-full flex-wrap mt-2">
+                                <CartProvider>
+                                 <Products />
+                                 <CartPage />
+                                </CartProvider>
+                                 
                         </div>
                     </div>
                 </main>

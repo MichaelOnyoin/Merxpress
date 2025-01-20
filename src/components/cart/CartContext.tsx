@@ -1,6 +1,6 @@
-// context/CartContext.tsx
+'use client'
 import React, { createContext, useContext, useReducer, ReactNode } from "react";
-import { CartItem } from "./cart";
+import { CartItem } from "@/lib/cart";
 import { useEffect } from "react";
 
 interface CartState {
@@ -15,12 +15,18 @@ type CartAction =
 
 const initialCartState: CartState = {
   items: [],
+
   total: 0,
 };
 
+
 //const savedCart = JSON.parse(localStorage.getItem("cart") || "{}") || initialCartState;
 
+
 function cartReducer(state: CartState, action: CartAction): CartState {
+  //const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  //const cartCount = cartItems.reduce((count, item) => count + item.quantity, 0);
+
   switch (action.type) {
     case "ADD_ITEM": {
       const existingItem = state.items.find(item => item.id === action.payload.id);
@@ -40,7 +46,7 @@ function cartReducer(state: CartState, action: CartAction): CartState {
         (acc, item) => acc + item.price * item.quantity,
         0
       );
-
+      
       return { items: updatedItems, total: newTotal };
     }
 
@@ -50,7 +56,7 @@ function cartReducer(state: CartState, action: CartAction): CartState {
         (acc, item) => acc + item.price * item.quantity,
         0
       );
-
+     
       return { items: updatedItems, total: newTotal };
     }
 
@@ -62,15 +68,20 @@ function cartReducer(state: CartState, action: CartAction): CartState {
   }
 }
 
+
+
 const CartContext = createContext<{
   state: CartState;
   dispatch: React.Dispatch<CartAction>;
+  cartCount: number;
 }>({
   state: initialCartState,
   dispatch: () => null,
+  cartCount: 0,
 });
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
+    
     //const [state, dispatch] = useReducer(cartReducer, savedCart);
      const [state, dispatch] = useReducer(cartReducer, initialCartState);
     useEffect(() => {
@@ -78,7 +89,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     }, [state]);
   
   return (
-    <CartContext.Provider value={{ state, dispatch }}>
+    <CartContext.Provider value={{ state, dispatch, cartCount:state.items.length }}>
       {children}
     </CartContext.Provider>
   );
