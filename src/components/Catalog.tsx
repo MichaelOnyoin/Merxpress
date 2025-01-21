@@ -1,9 +1,9 @@
 'use client'
 import React from "react";
 import { useState } from "react";
-import { Products } from "@/components/Products";
-import { CartProvider } from "@/components/cart/CartContext";
-import CartPage from "@/components/cart/Cart";
+// import { Products } from "@/components/Products";
+// import { CartProvider } from "@/components/cart/CartContext";
+// import CartPage from "@/components/cart/Cart";
 
 export const Catalog: React.FC = () => {
     const price:number=0;
@@ -29,7 +29,7 @@ export const Catalog: React.FC = () => {
                             <input type="text" className="border rounded p-1 w-1/2 mr-2"  defaultValue={0} />
                             <input type="text" className="border rounded p-1 w-1/2 "
                              value={`$${value}`}
-                               
+                             defaultValue={100}
                              
                              />
                         </div>
@@ -194,13 +194,13 @@ export const Catalog: React.FC = () => {
                                 <i className="far fa-heart"></i>
                             </button>
                         </div>
-                        <div className="flex flex-row w-full flex-wrap mt-2">
+                        {/* <div className="flex flex-row w-full flex-wrap mt-2">
                                 <CartProvider>
                                  <Products />
                                  <CartPage />
                                 </CartProvider>
                                  
-                        </div>
+                        </div> */}
                     </div>
                 </main>
                 <aside className="w-full md:w-1/4 mb-4 md:mb-0">

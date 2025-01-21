@@ -95,4 +95,10 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const useCart = () => useContext(CartContext);
+//export const useCart = () => useContext(CartContext);
+export const useCart = () => {
+  if (CartContext === undefined) {
+    throw new Error("useCart must be used within a CartProvider");
+  }
+    return useContext(CartContext);
+}
