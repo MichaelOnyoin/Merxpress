@@ -4,6 +4,12 @@ import { Heart, CirclePlus } from "lucide-react";
 import { ProductCardProps } from "@/db/definitions";
 import { useCart } from "@/components/cart/CartContext";
 import CustomAlert from "./CustomAlert";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+    TooltipProvider,
+  } from '@/components/ui/tooltip'
 
 interface ProductProps {
     //product: CartItem;
@@ -68,9 +74,19 @@ export const ItemCard=({product}:ProductProps)=>{
                     
                     <h2 className="text-lg  mb-2 text-slate-900">{product.title}</h2>
                     <p className="text-gray-500 leading-7">{product.description}</p>
-                    <CirclePlus className=' h-6 stroke-gray-800 mr-2 absolute bottom-4 right-0 hover:fill-green-700 hover:stroke-white' strokeWidth={1.0} fill='none' href='null' role="button"
-                        onClick={addToCart}
-                        />
+                    <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger asChild>
+                            {/* <button className="bg-green-500 text-white p-2 rounded-lg mt-4">Add to Cart</button> */}
+                            <CirclePlus className=' h-6 stroke-gray-800 mr-2 absolute bottom-4 right-0 hover:fill-green-700 hover:stroke-white' strokeWidth={1.0} fill='none' href='null' role="button"
+                                onClick={addToCart}
+                                />
+                        </TooltipTrigger>
+                        <TooltipContent sideOffset={5} className="transform -translate-x-1/2 bg-gray-500 text-white p-4 rounded shadow-sm opacity-100 p-2 rounded-lg ">
+                            Add this item to your cart
+                        </TooltipContent>
+                    </Tooltip>
+                    </TooltipProvider>
             </div>
         
 

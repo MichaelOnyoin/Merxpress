@@ -1,10 +1,13 @@
 'use client'
+//why is my item.image returning an empty string??
 import React from "react";
 import { useCart } from "./CartContext";
-
+import Image from "next/image";
+//import { savedCart } from "./CartContext";
 
 export const CartPage = () => {
   const { state, dispatch } = useCart();
+  
 
   const removeItem = (id: string) => {
     dispatch({ type: "REMOVE_ITEM", payload: id });
@@ -22,17 +25,23 @@ export const CartPage = () => {
       ) : (
         <div className="flex flex-row flex-wrap justify-between ">
           {state.items.map(item => (
-            <div key={item.id} className="bg-white p-4 my-4 rounded-lg shadow-md justify-between items-center text-slate-700 ">
-              <img src={item.image} alt={item.title} className="w-24 h-24 object-contain" />
-              <p className="text-lg  mb-2 text-slate-900">{item.title}</p>
+            <div key={item.id} className="bg-white p-4 my-4 rounded-lg shadow-md justify-between items-center text-slate-700 w-1/4 mx-2">
+              {/* <img src={item.image} alt={item.title} className="w-24 h-24 object-contain" /> */}
+              <Image src={`/${item.image || 'images/drum.png'}` } alt={item.title} height={250} width={200} className="object-contain" />
+              
+              <p className="text-md  mb-2 text-slate-900">{item.title}</p>
               <p className="text-xl font-bold">${item.price} x {item.quantity}</p>
-              <button onClick={() => removeItem(item.id)} className="rounded-lg bg-red-400 text-white p-2">Remove</button>
+              <p className="text-sm">ImagePath: {item.image}</p>
+              {/* why is my item.image returning an empty string ??*/}
+              <button onClick={() => removeItem(item.id)} className="rounded-lg bg-red-500 text-white p-2">Remove</button>
             </div>
           ))}
-          
+          <div className="flex flex-col relative">
           <h3 className=" text-2xl text-slate-700">Total: ${state.total.toFixed(2)}</h3>
-          <button onClick={clearCart} className="bg-red-500 p-2 rounded-lg">Clear Cart</button>
+          <button onClick={clearCart} className="bg-red-500 text-white p-2 rounded-lg">Clear Cart</button>
+          </div>
         </div>
+        
       )}
     </div>
   );

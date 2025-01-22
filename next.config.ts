@@ -11,6 +11,13 @@ const nextConfig: NextConfig = {
         pathname: '**',
         search: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.builder.io/api/v1/image/assets',
+        port: '',
+        pathname: '**',
+        search: '',
+      },
     ],
   },
 };

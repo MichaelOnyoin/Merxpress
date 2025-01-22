@@ -20,12 +20,9 @@ const initialCartState: CartState = {
 };
 
 
-//const savedCart = JSON.parse(localStorage.getItem("cart") || "{}") || initialCartState;
-
 
 function cartReducer(state: CartState, action: CartAction): CartState {
-  //const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  //const cartCount = cartItems.reduce((count, item) => count + item.quantity, 0);
+  //const savedCart = JSON.parse(localStorage.getItem("cart") || "{}") || initialCartState;
 
   switch (action.type) {
     case "ADD_ITEM": {
@@ -82,11 +79,16 @@ const CartContext = createContext<{
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
     
+    //const savedCart = JSON.parse(localStorage.getItem("cart") || "{}") || initialCartState
     //const [state, dispatch] = useReducer(cartReducer, savedCart);
      const [state, dispatch] = useReducer(cartReducer, initialCartState);
     useEffect(() => {
+      
       localStorage.setItem("cart", JSON.stringify(state));
+      
     }, [state]);
+    
+
   
   return (
     <CartContext.Provider value={{ state, dispatch, cartCount:state.items.length }}>
@@ -102,3 +104,4 @@ export const useCart = () => {
   }
     return useContext(CartContext);
 }
+

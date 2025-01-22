@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 import { useState } from "react";
+import { LayoutList, LayoutGrid } from "lucide-react";
 // import { Products } from "@/components/Products";
 // import { CartProvider } from "@/components/cart/CartContext";
 // import CartPage from "@/components/cart/Cart";
@@ -26,10 +27,10 @@ export const Catalog: React.FC = () => {
                     <div className="mb-4">
                         <h2 className="font-bold mb-2">Price</h2>
                         <div className="flex justify-between items-center mb-2">
-                            <input type="text" className="border rounded p-1 w-1/2 mr-2"  defaultValue={0} />
+                            <input type="text" className="border rounded p-1 w-1/2 mr-2" defaultValue={0} />
                             <input type="text" className="border rounded p-1 w-1/2 "
                              value={`$${value}`}
-                             defaultValue={100}
+                             defaultValue={0}
                              
                              />
                         </div>
@@ -129,10 +130,12 @@ export const Catalog: React.FC = () => {
                             </select>
                             <div className="flex">
                                 <button className="border rounded p-2 mr-2">
-                                    <i className="fas fa-th"></i>
+                                    {/* <i className="fas fa-th"></i> */}
+                                    <LayoutGrid size={24} className="hover:text-red-500" />
                                 </button>
                                 <button className="border rounded p-2">
-                                    <i className="fas fa-list"></i>
+                                    {/* <i className="fas fa-list"></i> */}
+                                    <LayoutList size={24} className="hover:text-red-500" />
                                 </button>
                             </div>
                         </div>
@@ -194,13 +197,17 @@ export const Catalog: React.FC = () => {
                                 <i className="far fa-heart"></i>
                             </button>
                         </div>
-                        {/* <div className="flex flex-row w-full flex-wrap mt-2">
-                                <CartProvider>
-                                 <Products />
-                                 <CartPage />
-                                </CartProvider>
-                                 
-                        </div> */}
+                        <div className="bg-white rounded-lg shadow-md p-4 relative">
+                            <img src="https://placehold.co/300x200" alt="OXO Good Grips Swivel Peeler" className="w-full h-40 object-cover mb-4" />
+                            <div className="flex justify-between items-center mb-2">
+                                <span className="text-red-500 text-xl font-bold">$8.99</span>
+                            </div>
+                            <h3 className="font-bold mb-2">OXO Good Grips Swivel Peeler</h3>
+                            <p className="text-gray-500 text-sm">Stainless steel blade with a comfortable non-slip handle</p>
+                            <button className="absolute top-2 right-2 text-red-500">
+                                <i className="far fa-heart"></i>
+                            </button>
+                        </div>
                     </div>
                 </main>
                 <aside className="w-full md:w-1/4 mb-4 md:mb-0">
