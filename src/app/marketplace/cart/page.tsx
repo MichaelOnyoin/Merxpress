@@ -2,14 +2,19 @@
 import React from 'react';
 import { CartProvider } from '@/components/cart/CartContext';
 //import { Items } from '@/components/Items';
-import Cart from '@/components/cart/Cart';
+import CartPage from '@/components/cart/Cart';
+import { Header } from '@/components/Header';
+import { MerxLayout } from '@/components/merxDash';
 
 const App: React.FC = () => {
   return (
     <CartProvider>
       <div className="app">
+        <Header />
+        <MerxLayout>
         {/* <Items /> */}
-        <Cart />
+        <CartPage />
+        </MerxLayout>
       </div>
     </CartProvider>
   );

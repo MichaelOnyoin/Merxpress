@@ -17,7 +17,7 @@ export const Dash = () => {
             </div>
             <div className="bg-white p-0 hover:shadow-md rounded-2xl flex justify-between col-span-1 sm:col-span-2">
                 <div className="text-2xl font-semibold p-4 ">
-                    <a href="/marketplace/catalog">
+                    <a href="/marketplace/sell">
                     Sell on <span className="text-red-600">Merxpress</span>
                     </a>
                 </div>
@@ -43,7 +43,9 @@ export const Dash = () => {
             </div>
             <div className="bg-white estate rounded-2xl hover:shadow-md flex justify-between row-span-2">
                 <div className="text-2xl p-4 font-semibold">
+                    <a href="/merxestates">
                     Merx<span className="text-red-600">Estates</span>
+                    </a>
                 </div>
                 {/* <img src="estates.png" alt="Buildings" className=" object-cover self-end rounded-e-lg" style={{height:'42%', width:'36%'}}/> */}
             </div>

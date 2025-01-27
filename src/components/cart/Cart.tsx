@@ -19,7 +19,7 @@ export const CartPage = () => {
 
   return (
     <div className="p-4 min-h-screen relative">
-      <h1 className="text-2xl text-slate-700">Your Cart</h1>
+      <h1 className="text-2xl text-slate-700 items-center justify-center">Your Cart</h1>
       {state.items.length === 0 ? (
         <p>Your cart is empty</p>
       ) : (
@@ -38,7 +38,10 @@ export const CartPage = () => {
           ))}
           <div className="flex flex-col relative">
           <h3 className=" text-2xl text-slate-700">Total: ${state.total.toFixed(2)}</h3>
-          <button onClick={clearCart} className="bg-red-500 text-white p-2 rounded-lg">Clear Cart</button>
+          <button onClick={clearCart} className="bg-red-600 text-white p-2 rounded-lg">Clear Cart</button>
+          <button className="bg-blue-500 text-white p-2 rounded-lg mt-2">
+            CheckOut
+          </button>
           </div>
         </div>
         

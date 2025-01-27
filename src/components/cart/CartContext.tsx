@@ -11,7 +11,8 @@ interface CartState {
 type CartAction =
   | { type: "ADD_ITEM"; payload: CartItem }
   | { type: "REMOVE_ITEM"; payload: string } // id of the item
-  | { type: "CLEAR_CART" };
+  | { type: "CLEAR_CART" }
+  | { type: "LOAD_FROM_STORAGE"; payload: CartState };
 
 const initialCartState: CartState = {
   items: [],
@@ -59,7 +60,11 @@ function cartReducer(state: CartState, action: CartAction): CartState {
 
     case "CLEAR_CART":
       return initialCartState;
+    case "LOAD_FROM_STORAGE": {
+      return action.payload;
+    }
 
+    //default:
     default:
       return state;
   }
@@ -82,6 +87,13 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     //const savedCart = JSON.parse(localStorage.getItem("cart") || "{}") || initialCartState
     //const [state, dispatch] = useReducer(cartReducer, savedCart);
      const [state, dispatch] = useReducer(cartReducer, initialCartState);
+
+     useEffect(() => {
+      if (typeof window !== 'undefined') {
+        const savedCart = JSON.parse(window.localStorage.getItem('cart') || '{}') || initialCartState;
+        dispatch({ type: 'LOAD_FROM_STORAGE', payload: savedCart });
+      }
+    }, []);
     useEffect(() => {
       
       localStorage.setItem("cart", JSON.stringify(state));
