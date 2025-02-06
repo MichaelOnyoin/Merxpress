@@ -10,6 +10,7 @@ import {
     TooltipTrigger,
     TooltipProvider,
   } from '@/components/ui/tooltip'
+import { toast } from 'sonner';
 
 interface ProductProps {
     //product: CartItem;
@@ -28,6 +29,7 @@ export const ItemCard=({product}:ProductProps)=>{
               type: "ADD_ITEM",
               payload: { ...product, quantity: 1 },
             });
+            toast.success('Item added to cart',{position:'top-right',duration:2000,style:{backgroundColor:'white',color:'green',border:'2px solid white',borderRadius:'10px', boxShadow:'0 0 5px '}});
           };
 
     function handleLike() {

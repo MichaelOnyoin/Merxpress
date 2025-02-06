@@ -103,7 +103,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   
   return (
-    <CartContext.Provider value={{ state, dispatch, cartCount:state.items.length }}>
+    <CartContext.Provider value={{ state, dispatch, cartCount: state.items.length }}>
       {children}
     </CartContext.Provider>
   );

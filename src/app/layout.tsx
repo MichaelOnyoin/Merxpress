@@ -3,6 +3,9 @@ import { inter } from '@/app/ui/font';
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Toaster } from '@/components/ui/sonner';
+//import ResponsiveComponent from '@/components/ui/ResponsiveComponent';
+
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -32,6 +35,7 @@ export default function RootLayout({
         className={`${inter.className} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Toaster richColors />
       </body>
     </html>
   );

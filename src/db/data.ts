@@ -11,7 +11,8 @@ export async function getProducts() {
     noStore();
   try{
     console.log('Fetching product data...');
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    //await new Promise((resolve) => setTimeout(resolve, 3000));
+    //const { rows } = await sql<Product>`SELECT * FROM products`;
     const { rows } = await sql<Product>`SELECT * FROM products`;
     return rows;
   } 

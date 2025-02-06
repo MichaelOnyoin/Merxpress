@@ -3,7 +3,7 @@
 import React from "react";
 import { useCart } from "./CartContext";
 import Image from "next/image";
-//import { savedCart } from "./CartContext";
+import { toast } from "sonner";
 
 export const CartPage = () => {
   const { state, dispatch } = useCart();
@@ -11,10 +11,12 @@ export const CartPage = () => {
 
   const removeItem = (id: string) => {
     dispatch({ type: "REMOVE_ITEM", payload: id });
+    toast.error('Item removed from cart',{position:'top-right', duration:2000,style:{backgroundColor:'white',color:'red',border:'2px solid white',borderRadius:'10px', boxShadow:'0 0 10px red'}});
   };
 
   const clearCart = () => {
     dispatch({ type: "CLEAR_CART" });
+    toast.error('Cart cleared',{position:'top-right', duration:2000,style:{backgroundColor:'white',color:'red',border:'2px solid white',borderRadius:'10px', boxShadow:'0 0 5px red'}});
   };
 
   return (

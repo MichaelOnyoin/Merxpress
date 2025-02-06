@@ -48,7 +48,7 @@ export interface ProductData {
     title: string;
     description: string;
     imageUrl: string;
-    liked?:boolean;
+    //liked?:boolean;
   }
   
   export type CartItem = {
