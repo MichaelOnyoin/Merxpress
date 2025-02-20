@@ -22,15 +22,7 @@ export default function ProductsPage({
     <div className="" >
         <h1 className="text-3xl font-bold text-slate-900">Products</h1>
         <div className="flex flex-col mt-2">
-      {/* {allProducts.map((product) => (
-        <div>
-        <li key={product.id}>{product.title}</li>
-        <li>{product.description}</li>
-        <li>{product.price}</li>
-        <img src={product.imageUrl} alt='items'/>
-        </div>
-
-      ))} */}
+      
       <div className='flex flex-row mb-4'>
       {allProducts.map((product) => (
         <div key={product.id} className="bg-white p-4 rounded-lg shadow-md flex flex-col mr-4 relative" >
@@ -59,6 +51,7 @@ export default function ProductsPage({
          
          <h2 className="text-lg  mb-2 text-slate-900">{product.title}</h2>
          <p className="text-gray-500 leading-7">{product.description}</p>
+         <p className='text-stone-600'>Img:{product.imageUrl}</p>
          <TooltipProvider>
          <Tooltip>
              <TooltipTrigger asChild>

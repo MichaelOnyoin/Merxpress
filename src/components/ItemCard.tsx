@@ -43,7 +43,8 @@ export const ItemCard=({product}:ProductProps)=>{
 
     
     return(
-            <div className="bg-white p-4 rounded-lg shadow-md flex flex-col mr-4 relative" >
+        //hover:scale-105 transition-transform duration-300 ease-in-out
+            <div className="bg-white p-4 rounded-lg shadow-md flex flex-col mr-4 relative hover:translate-y-[-2%] transition-transform duration-300 ease-in-out" >
                 {showAlert && (
                 <CustomAlert
                     message={`Liked this! Total likes: ${likeCount}`}

@@ -82,7 +82,7 @@ export const ItemDisplay: React.FC = () => {
   )
     return (
         <div className="flex flex-col mt-4 w-full max-md:mt-10 max-md:max-w-full">
-            <h1 className="text-2xl font-bold mb-6 text-slate-900 max-md:max-w-full">Popular Items</h1>
+            <h1 className="text-2xl font-bold mb-8 text-slate-900 max-md:max-w-full">Popular Items</h1>
             <Carousel
               plugins={[plugin.current]}
               onMouseEnter={plugin.current.stop}
@@ -96,7 +96,7 @@ export const ItemDisplay: React.FC = () => {
                     <button className="text-slate-900">Previous</button>
                 </CarouselPrevious>
                 
-                <CarouselContent className="">
+                <CarouselContent className="p-2">
                     {products.map((product) => (
                         <CarouselItem key={product.id} className="md:basis-1/2 lg:basis-1/4 flex flex-row mb-4">
                             <ItemCard product={product} />

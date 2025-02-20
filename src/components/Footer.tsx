@@ -9,7 +9,7 @@ export const Footer = () => {
                     <div className="mb-6 md:mb-0">
                         <h1 className="text-4xl font-bold text-white">
                             {/* <span className="text-white">Merx</span><span className="text-red-500">press</span> */}
-                            <img src="merxpressLogo.svg" alt=""  />
+                            <img src="/merxpressLogo.svg" alt="logo"  />
                         </h1>
                     </div>
                     <div className="flex flex-col md:flex-row justify-between w-full md:w-auto">

@@ -18,7 +18,7 @@ export default function Posts({
         <li >{post.title}</li>
         
         <li><img src={post.image} alt={post.title} className='h-44 w-44' /></li>
-        
+        <li><p>{post.image}</p></li>
         </ul>
 
       ))}

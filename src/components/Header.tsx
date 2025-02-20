@@ -2,31 +2,14 @@
 import React from 'react'
 //import { SearchBar } from './ui/SearchBar'
 import { Settings, ShoppingCart, CircleUserRound, Mic, Search } from 'lucide-react'
-//import { useSearchParams, usePathname, useRouter } from 'next/navigation';
-// import { useDebouncedCallback} from 'use-debounce'
- import { useCart } from '@/components/cart/CartContext';
+
+import { useCart } from '@/components/cart/CartContext';
 
 export const Header=()=>{
 
-    //const searchParams = useSearchParams();
-    // const pathname = usePathname();
-    // const { replace } = useRouter();
+    
      const{cartCount} = useCart();
-    // const [search, setSearch] = React.useState('');
-    // const [debouncedSearch] = useDebounce(search, 300);
-    // const [searchResults, setSearchResults] = React.useState([]);
-    // const handleSearch = useDebouncedCallback((term) => {
-
-    //     console.log(`Searching... ${term}`);
-       // const params = new URLSearchParams(searchParams);
-    //     params.set('page', '1');
-    //     if (term) {
-    //       params.set('query', term);
-    //     } else {
-    //       params.delete('query');
-    //     }
-    //     replace(`${pathname}?${params.toString()}`);
-    //   }, 300);
+    
     
     return(
         <nav className="bg-[#011627] p-4 flex justify-between items-center">
