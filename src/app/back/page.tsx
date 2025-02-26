@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ItemCard } from "@/components/ItemCard";
+import { Product } from "@/db/definitions";
 import axios from "axios";
 
 const Products = () => {
@@ -16,11 +17,13 @@ const Products = () => {
   return (
     <div className="p-4 bg-gray-100">
       <h2 className="p-4 mb-10 text-xl ">Products</h2>
+      <div className="flex flex-col mt-2">
       <div className="flex flex-row mb-4">
-      {products.map((product: any) => (
+      {products.map((product:Product) => (
         
-        <ItemCard key={product.id} product={product} />
+        <ItemCard key={product.id} product={product}  />
       ))}
+      </div>
       </div>
     </div>
   );
