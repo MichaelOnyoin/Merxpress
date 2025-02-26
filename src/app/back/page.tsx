@@ -15,11 +15,19 @@ const Products = () => {
   }, []);
 
   return (
-    <div className="p-4 bg-gray-100">
-      <h2 className="p-4 mb-10 text-xl ">Products</h2>
+    <div className="p-4 bg-gray-100 w-full">
+      <h2 className="p-4 mb-10 text-2xl font-bold mb-6 text-slate-800 max-md:max-w-full ">Products</h2>
       <div className="flex flex-col mt-2">
       <div className="flex flex-row mb-4">
-      {products.map((product:Product) => (
+      {products.slice(0, 4).map((product:Product) => (
+        
+        <ItemCard key={product.id} product={product}  />
+      ))}
+      </div>
+      </div>
+      <div className="flex flex-col mt-2">
+      <div className="flex flex-row mb-4">
+      {products.slice(4).map((product:Product) => (
         
         <ItemCard key={product.id} product={product}  />
       ))}
