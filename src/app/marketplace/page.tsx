@@ -8,7 +8,7 @@ import { Items } from "@/components/Items";
 import { ItemDisplay } from "@/components/Display";
 import { NavList } from "@/components/NavList";
 //import Cart from "@/components/Cart";
-import Products  from "@/components/Shelf";
+//import Products  from "@/components/Shelf";
 //import { Products } from "@/components/cart/Products";
 import CartPage from "@/components/cart/Cart";
 import { CartProvider } from "@/components/cart/CartContext";
@@ -17,7 +17,7 @@ import { CartProvider } from "@/components/cart/CartContext";
 export default function Market(){
     return(
         <div>
-            {/* <CartProvider> */}
+            
             <CartProvider>
             <Header/>
             <NavList/>
@@ -26,15 +26,11 @@ export default function Market(){
             <MerxLayout>              
                 <Items/>
                 <ItemDisplay/>
-                <Products/>
+                {/* <Products/> */}
                 <CartPage/>
             </MerxLayout>
      
             <Mid/>
-            {/* <MerxLayout>
-                <Products/>
-                <CartPage/>
-            </MerxLayout> */}
             </CartProvider>
             <Footer/>
 

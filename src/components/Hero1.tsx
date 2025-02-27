@@ -6,7 +6,7 @@ export const Page=()=>{
     
 
     return(
-        <div className="mt-10 px-4 bg-white">
+        <div className=" px-4 bg-white" style={{marginTop:"40px"}}>
             <div className="flex flex-col md:flex-row items-center">
                 <div className="ml-10 md:w-1/2">
                     <h1 className="text-6xl mr-2.5 font-bold text-gray-700">Welcome to Merxpress Mall</h1>
