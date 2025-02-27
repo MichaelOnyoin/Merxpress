@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export const Page=()=>{
-    const router = useRouter()
+    
 
     return(
         <div className="mt-10 px-4 bg-white">
@@ -11,7 +11,9 @@ export const Page=()=>{
                 <div className="ml-10 md:w-1/2">
                     <h1 className="text-6xl mr-2.5 font-bold text-gray-700">Welcome to Merxpress Mall</h1>
                     <p className="text-2xl text-gray-700 mt-4 font-semibold">Infinite opportunities for everyone <br></br> and everywhere</p>
-                    <button className="mt-6 px-6 py-3 bg-red-500 text-white rounded-lg" onClick={() => router.push('/marketplace')} >Explore More</button>
+                    <Link href="/marketplace">
+                    <button className="mt-6 px-6 py-3 bg-red-500 text-white rounded-lg" >Explore More</button>
+                    </Link>
                 </div>
                 <div className="md:w-1/2 mt-6 md:mt-0 mr-4">
                     <img src="Hero.png" alt="Two people working together on a computer" className="rounded-lg shadow-lg" style={{height:"400px",width:"700px"}} />

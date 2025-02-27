@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const Mid = () => {
     return (
-        <div className="container mx-auto bg-white  flex justify-center items-center min-h-screen bg-gray-100">
+        <div className=" w-full bg-white flex justify-center items-center min-h-screen bg-gray-100">
             <div className="bg-indigo-200 rounded-lg p-8 flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-6 max-w-6xl">
                 <div className="flex-1">
                     <h2 className="text-2xl font-bold text-gray-800 mb-4">Why Choose Merxpress?</h2>
