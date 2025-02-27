@@ -11,7 +11,7 @@ export const CartPage = () => {
 
   const removeItem = (id: string) => {
     dispatch({ type: "REMOVE_ITEM", payload: id });
-    toast.error('Item removed from cart',{position:'top-right', duration:2000,style:{backgroundColor:'white',color:'red',border:'2px solid white',borderRadius:'10px', boxShadow:'0 0 10px red'}});
+    toast.error('Item removed from cart',{position:'top-right', duration:2000, style:{backgroundColor:'white',color:'red',border:'2px solid white',borderRadius:'10px', boxShadow:'0 0 10px red'}});
   };
 
   const clearCart = () => {
