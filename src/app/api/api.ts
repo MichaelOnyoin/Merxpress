@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const API_URL = "http://localhost:5000/products"; // Backend URL
+//const API_URL = "https://backend.onyoin.com/products"; // Backend URL
 
 export const getProducts = async () => {
     const response = await axios.get(API_URL);
