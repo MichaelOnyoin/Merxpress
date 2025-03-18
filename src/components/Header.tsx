@@ -2,6 +2,7 @@
 import React from 'react'
 //import { SearchBar } from './ui/SearchBar'
 import { Settings, ShoppingCart, CircleUserRound, Mic, Search } from 'lucide-react'
+import { Account } from './Account';
 
 import { useCart } from '@/components/cart/CartContext';
 
@@ -46,10 +47,15 @@ export const Header=()=>{
                     
                 </div>
                 <a href="#" className="text-gray-400 hover:text-red-500">Settings</a>
-                <div className="relative">
+                <div className="relative group">
                     
                     <CircleUserRound className='w-8 h-8 stroke-white hover:stroke-red-500 shrink-0 self-stretch my-auto aspect-square' strokeWidth={1.0} fill='none' href='null'/>
+                    <div className='absolute top-right translate-x-[-80%] hidden group-hover:block'>
                     
+                    <Account/>
+                    {/* <Auth/> */}
+
+                    </div>
                 </div>
                 <a href="#" className="text-gray-400 hover:text-red-500">Account</a>
                 {/* <div className="flex items-center gap-x-1 hover:text-[#EB4545] text-[#ECECEC] cursor-pointer">

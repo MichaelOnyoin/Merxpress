@@ -18,7 +18,7 @@ const galleryImages = [
 
 export const ImageGallery: React.FC = () => {
   return (
-    <div className="flex flex-wrap items-center w-full p-4 mt-10">
+    <div className="bg-white flex flex-wrap items-center w-full p-4 mt-10">
       {galleryImages.map((image, index) => (
         <ImageCard
           key={index}

@@ -1,6 +1,7 @@
 'use client'
 import { use } from 'react';
 import React from 'react';
+import Image from 'next/image';
  
 export default function Posts({
   posts,
@@ -16,8 +17,8 @@ export default function Posts({
         <ul key={post.id}>
         
         <li >{post.title}</li>
-        
-        <li><img src={post.image} alt={post.title} className='h-44 w-44' /></li>
+        <li><Image src={`${post.image}`} alt={post.title} width={500} height={500} /></li>
+        {/* <li><img src={post.image} alt={post.title} className='h-44 w-44' /></li> */}
         <li><p>{post.image}</p></li>
         </ul>
 

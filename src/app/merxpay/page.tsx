@@ -8,7 +8,7 @@ import { ImageGallery } from "@/components/pay/ImageGallery";
 import { PaymentFeatures } from "@/components/pay/PaymentFeatures";
 export default function MerxPay() {
     return (
-        <div className="app ">
+        <div className="">
             <Header />         
             <PayHero/>       
             <ImageGallery />

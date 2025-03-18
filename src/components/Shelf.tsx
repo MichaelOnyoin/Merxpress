@@ -9,7 +9,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("https://backend.onyoin.com/products")
+    axios.get("http://localhost:5000/products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.error(err));
   }, []);

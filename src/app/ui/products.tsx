@@ -9,7 +9,7 @@ import {
     TooltipTrigger,
     TooltipProvider,
   } from '@/components/ui/tooltip'
-
+import Image from 'next/image';
 
 export default function ProductsPage({
   products,
@@ -26,9 +26,11 @@ export default function ProductsPage({
       <div className='flex flex-row mb-4'>
       {allProducts.map((product) => (
         <div key={product.id} className="bg-white p-4 rounded-lg shadow-md flex flex-col mr-4 relative" >
-         <img 
-         src={product.imageUrl}
+         <Image 
+         src={`/${product.imageUrl || 'images/drum.png'}`}
          alt={product.title} 
+         height={200}
+         width={200}
          className="w-full object-contain mb-4"/>
          <Heart className=' h-5 stroke-red-400 absolute top-4 mr-2 right-0 hover:fill-red-500' strokeWidth={1.0} fill='none' href='null' role="button" />
                      

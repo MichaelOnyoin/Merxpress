@@ -13,7 +13,7 @@ const productData = [
 
 export const ProductGallery: React.FC = () => {
   return (
-    <div className="bg-white flex flex-wrap gap-4 items-center text-2xl font-semibold text-slate-900 ml-8 ">
+    <div className="bg-white pt-2 px-4 flex flex-wrap gap-4 items-center text-2xl font-semibold text-slate-900 ml-8 ">
       <ProductImage
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/148ac3efceb707e4f9b8fc7204f5a6a03a046e9d6fea6379b04b0add498543e4?apiKey=2c0ef7d7caa24d8d8c04d3962010fc58&"
         alt="Featured product"
@@ -36,7 +36,7 @@ export const ProductGallery: React.FC = () => {
         className="object-contain shrink-0 self-stretch my-auto aspect-[1.38] min-w-[240px] w-[415px] hover:scale-105 transition-transform duration-300 ease-in-out"
       />
       
-      <div className="flex shrink-0 self-stretch my-auto h-[100px] min-w-[240px] w-[415px]" />
+      <div className="flex shrink-0 self-stretch my-auto h-[100px] min-w-[240px] w-full" />
     </div>
   );
 }

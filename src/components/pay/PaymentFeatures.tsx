@@ -60,7 +60,7 @@ const rightFeatures = [
 
 export const PaymentFeatures: React.FC = () => {
   return (
-    <div className="flex flex-wrap gap-10 items-start text-lg container mx-auto mt-20">
+    <div className="bg-white flex flex-wrap gap-10 items-start text-lg container mx-auto mt-20">
       <div className="flex flex-col flex-1 shrink basis-0 min-h-[328px] min-w-[240px] max-md:max-w-full">
         <h1 className="text-4xl font-semibold text-slate-900 max-md:max-w-full">
           Everything You Need for Seamless Transactions

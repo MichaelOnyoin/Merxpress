@@ -1,4 +1,3 @@
-'use client'
 import React from 'react';
 import { CartProvider } from '@/components/cart/CartContext';
 import CartPage from '@/components/cart/Cart';
@@ -6,6 +5,9 @@ import { Header } from '@/components/Header';
 import { MerxLayout } from '@/components/merxDash';
 import { Mid } from '@/components/MidSection';
 import { Footer } from '@/components/Footer';
+//import { OrderView } from '@/components/checkout/Order';
+//import {OrderData} from '@/components/OrderData';
+import Auth from '@/components/Auth';
 
 const App: React.FC = () => {
   return (
@@ -13,8 +15,11 @@ const App: React.FC = () => {
       <div className="app">
         <Header />
         <MerxLayout>
-        {/* <Items /> */}
+          <Auth/>
+        
         <CartPage />
+        {/* <OrderView/> */}
+        {/* <OrderData/> */}
         </MerxLayout>
       </div>
       <Mid/>

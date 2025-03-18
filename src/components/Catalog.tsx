@@ -15,7 +15,7 @@ export const Catalog: React.FC = () => {
         setValue(newValue)
     }
     return (
-        <div className="container mx-auto p-2 ">
+        <div className="w-full p-2 ">
             <nav className="text-md text-gray-500 font-semibold mb-4 px-0 mr-0">
                 <a href="#" className="hover:underline  mr-4">Home</a> /     
                 <a href="#" className="hover:underline ml-2 mr-4">Catalog</a> / 
@@ -23,14 +23,14 @@ export const Catalog: React.FC = () => {
             </nav>
             <h1 className="text-4xl font-bold mb-4">Cutting Tools and Accessories (136)</h1>
             <div className="flex flex-wrap">
-                <aside className="w-full md:w-1/4 p-4 bg-white rounded-lg shadow-md mb-4 md:mb-0">
+                <aside className="w-full md:w-1/4 p-4 bg-white text-slate-800 rounded-lg shadow-md mb-4 md:mb-0">
                     <div className="mb-4">
                         <h2 className="font-bold mb-2">Price</h2>
                         <div className="flex justify-between items-center mb-2">
                             <input type="text" className="border rounded p-1 w-1/2 mr-2" defaultValue={0} />
                             <input type="text" className="border rounded p-1 w-1/2 "
                              value={`$${value}`}
-                             defaultValue={0}
+                             //defaultValue={0}
                              
                              />
                         </div>
@@ -149,7 +149,7 @@ export const Catalog: React.FC = () => {
                                 <span className="text-gray-500 line-through">$400.09</span>
                                 <span className="text-red-500">-5%</span>
                             </div>
-                            <h3 className="font-bold mb-2">WÜSTHOF Classic 8&qout; Chef&apos;s Knife</h3>
+                            <h3 className="font-bold mb-2 text-gray-800">WÜSTHOF Classic 8&qout; Chef&apos;s Knife</h3>
                             <p className="text-gray-500 text-sm">Multipurpose knife with high carbon stainless steel blade for precision and durability</p>
                             <button className="absolute top-2 right-2 text-red-500">
                                 <i className="far fa-heart"></i>
@@ -163,7 +163,7 @@ export const Catalog: React.FC = () => {
                                 <span className="text-gray-500 line-through">$150.09</span>
                                 <span className="text-red-500">-15%</span>
                             </div>
-                            <h3 className="font-bold mb-2">Chef&apos;sChoice 15 Trizor XV EdgeSelect Professional Electric Knife Sharpener</h3>
+                            <h3 className="font-bold mb-2 text-gray-800">Chef&apos;sChoice 15 Trizor XV EdgeSelect Professional Electric Knife Sharpener</h3>
                             <p className="text-gray-500 text-sm">Converts knives to 15-degree edges for professional-level sharpness</p>
                             <button className="absolute top-2 right-2 text-red-500">
                                 <i className="far fa-heart"></i>
@@ -178,7 +178,7 @@ export const Catalog: React.FC = () => {
                                 <span className="text-gray-500 line-through">$400.09</span>
                                 <span className="text-red-500">-20%</span>
                             </div>
-                            <h3 className="font-bold mb-2">Shun Classic Blonde 6&qout; Chef&apos;s Knife</h3>
+                            <h3 className="font-bold mb-2 text-gray-800">Shun Classic Blonde 6&qout; Chef&apos;s Knife</h3>
                             <p className="text-gray-500 text-sm">Handcrafted Japanese Kitchen Knife, VG-MAX Core with Damascus Stainless Steel Cladding</p>
                             <button className="absolute top-2 right-2 text-red-500">
                                 <i className="far fa-heart"></i>
@@ -191,7 +191,7 @@ export const Catalog: React.FC = () => {
                             <div className="flex justify-between items-center mb-2">
                                 <span className="text-red-500 text-xl font-bold">$18.99</span>
                             </div>
-                            <h3 className="font-bold mb-2">Whetstone 1000 6000 Grit Kitchen Knife Sharpening Stones</h3>
+                            <h3 className="font-bold mb-2 text-gray-800">Whetstone 1000 6000 Grit Kitchen Knife Sharpening Stones</h3>
                             <p className="text-gray-500 text-sm">Dual-grit whetstone with a bamboo base for manual sharpening</p>
                             <button className="absolute top-2 right-2 text-red-500">
                                 <i className="far fa-heart"></i>
@@ -202,7 +202,7 @@ export const Catalog: React.FC = () => {
                             <div className="flex justify-between items-center mb-2">
                                 <span className="text-red-500 text-xl font-bold">$8.99</span>
                             </div>
-                            <h3 className="font-bold mb-2">OXO Good Grips Swivel Peeler</h3>
+                            <h3 className="font-bold mb-2 text-gray-800">OXO Good Grips Swivel Peeler</h3>
                             <p className="text-gray-500 text-sm">Stainless steel blade with a comfortable non-slip handle</p>
                             <button className="absolute top-2 right-2 text-red-500">
                                 <i className="far fa-heart"></i>

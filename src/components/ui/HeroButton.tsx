@@ -7,7 +7,7 @@ interface HeroButtonProps {
 export function HeroButton({ text }: HeroButtonProps) {
   return (
     <button 
-      className="gap-2 self-start px-10 mt-10 text-xl text-gray-200 bg-red-500 rounded-lg min-h-[60px] max-md:px-5"
+      className="gap-2 self-start px-10 mt-5 text-lg text-white bg-red-500 rounded-lg min-h-[40px] max-md:px-5"
       aria-label={text}
     >
       {text}

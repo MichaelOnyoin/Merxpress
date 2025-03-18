@@ -7,11 +7,10 @@ import { MerxLayout } from "@/components/merxDash";
 import { Items } from "@/components/Items";
 import { ItemDisplay } from "@/components/Display";
 import { NavList } from "@/components/NavList";
-//import Cart from "@/components/Cart";
 //import Products  from "@/components/Shelf";
-//import { Products } from "@/components/cart/Products";
 import CartPage from "@/components/cart/Cart";
 import { CartProvider } from "@/components/cart/CartContext";
+//import { CatalogData } from "@/components/CatalogData";
 
 
 export default function Market(){
@@ -27,6 +26,7 @@ export default function Market(){
                 <Items/>
                 <ItemDisplay/>
                 {/* <Products/> */}
+                {/* <CatalogData id={""} price={0} title={""} description={""} imageUrl={""}/> */}
                 <CartPage/>
             </MerxLayout>
      

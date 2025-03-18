@@ -62,9 +62,9 @@ export interface ProductData {
   
   export type Order = {
     id: string;
-    items: CartItem[];
     total: number;
     status: "pending" | "completed";
+    items: CartItem[];
   };
   
   export type OrderHistory = {

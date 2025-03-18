@@ -4,6 +4,7 @@ import React from "react";
 import { useCart } from "./CartContext";
 import Image from "next/image";
 import { toast } from "sonner";
+//import { setOrder } from "@/db/actions";
 
 export const CartPage = () => {
   const { state, dispatch } = useCart();
@@ -18,6 +19,12 @@ export const CartPage = () => {
     dispatch({ type: "CLEAR_CART" });
     toast.error('Cart cleared',{position:'top-right', duration:2000,style:{backgroundColor:'white',color:'red',border:'2px solid white',borderRadius:'10px', boxShadow:'0 0 5px red'}});
   };
+
+  const checkOut = () => {
+    //setOrder(state.total,state.items);
+    //dispatch({ type: "CLEAR_CART" });
+    toast.success('Order placed successfully',{position:'top-right', duration:2000,style:{backgroundColor:'white',color:'green',border:'2px solid white',borderRadius:'10px', boxShadow:'0 0 5px green'}});
+  }
 
   return (
     <div className="p-4 min-h-screen relative">
@@ -41,7 +48,7 @@ export const CartPage = () => {
           <div className="flex flex-col relative">
           <h3 className=" text-2xl text-slate-700">Total: ${state.total.toFixed(2)}</h3>
           <button onClick={clearCart} className="bg-red-600 text-white p-2 rounded-lg">Clear Cart</button>
-          <button className="bg-blue-500 text-white p-2 rounded-lg mt-2">
+          <button className="bg-blue-500 text-white p-2 rounded-lg mt-2" onClick={checkOut}>
             CheckOut
           </button>
           </div>
