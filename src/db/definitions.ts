@@ -63,8 +63,10 @@ export interface ProductData {
   export type Order = {
     id: string;
     total: number;
-    status: "pending" | "completed";
+    //status: "pending" | "completed";
+    status: string;
     items: CartItem[];
+    user_id?: string;
   };
   
   export type OrderHistory = {

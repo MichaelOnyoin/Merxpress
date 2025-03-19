@@ -1,4 +1,3 @@
-
 import React from 'react'
 import Link from 'next/link'
 import { HeroButton } from './ui/HeroButton'
@@ -21,10 +20,10 @@ export const Account =()=> {
                     <HeroButton text='Sign Up'/>
                     
                 </Link>
-                {/* <Link href="/handler/sign-out" className='ml-4'>
+                <Link href="/handler/sign-out" className='ml-4'>
                     <HeroButton text='Sign Out'/>
                     
-                </Link> */}
+                </Link>
          
             </div>
         </div>

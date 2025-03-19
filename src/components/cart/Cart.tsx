@@ -1,9 +1,17 @@
 'use client'
-//why is my item.image returning an empty string??
+
 import React from "react";
 import { useCart } from "./CartContext";
 import Image from "next/image";
 import { toast } from "sonner";
+import { Trash2 } from "lucide-react";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+    TooltipProvider,
+  } from '@/components/ui/tooltip'
+
 //import { setOrder } from "@/db/actions";
 
 export const CartPage = () => {
@@ -36,13 +44,25 @@ export const CartPage = () => {
           {state.items.map(item => (
             <div key={item.id} className="bg-white p-4 my-4 rounded-lg shadow-md justify-between items-center text-slate-700 w-1/4 mx-2">
               {/* <img src={item.image} alt={item.title} className="w-24 h-24 object-contain" /> */}
-              <Image src={`/${item.image || 'images/drum.png'}` } alt={item.title} height={250} width={200} className="object-contain" />
+              <Image src={`/${item.image || 'images/drum.png'}` } alt={item.title} height={250} width={200} className="w-full object-contain mb-4" />
+              <p className="gap-2.5 self-start text-xl whitespace-nowrap ">${item.price} x {item.quantity}</p>
+              <p className="text-lg mb-2 text-slate-900">{item.title}</p>
               
-              <p className="text-md  mb-2 text-slate-900">{item.title}</p>
-              <p className="text-xl font-bold">${item.price} x {item.quantity}</p>
-              <p className="text-sm">ImagePath: {item.image}</p>
-              {/* why is my item.image returning an empty string ??*/}
-              <button onClick={() => removeItem(item.id)} className="rounded-lg bg-red-500 text-white p-2">Remove</button>
+              {/* <p className="text-sm">ImagePath: {item.image}</p> */}
+              
+              {/* <button onClick={() => removeItem(item.id)} className="rounded-lg bg-red-500 text-white p-2 "><Trash2/></button> */}
+              <TooltipProvider>
+                <Tooltip>
+                <TooltipTrigger asChild>
+                  <Trash2 role="button" className="stroke-red-500" onClick={() => removeItem(item.id)}/>
+
+                </TooltipTrigger>
+                <TooltipContent sideOffset={5} className="transform -translate-x-[-2/3] bg-gray-500 text-white p-4 rounded shadow-sm opacity-100 p-2 rounded-lg ">
+                  Remove item from cart
+                </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              
             </div>
           ))}
           <div className="flex flex-col relative">
