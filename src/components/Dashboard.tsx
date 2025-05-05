@@ -17,7 +17,7 @@ export const Dash = () => {
             </div>
             <div className="bg-white p-0 hover:shadow-md rounded-2xl flex justify-between col-span-1 sm:col-span-2">
                 <div className="text-2xl font-semibold p-4 ">
-                    <a href="/marketplace/sell">
+                    <a href="/marketplace/catalog">
                     <span className="text-gray-800"> Sell on</span> <span className="text-red-600">Merxpress</span>
                     </a>
                 </div>

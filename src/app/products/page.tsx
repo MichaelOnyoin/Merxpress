@@ -1,4 +1,4 @@
-//import ProductsPage from "@/components/ui/UICard";
+'use client'
 import ProductsPage from '@/app/ui/products';
 import { getProducts } from '@/db/data';
 import React,{Suspense} from 'react';

@@ -1,4 +1,3 @@
-//import './global.css';
 import { StackProvider, StackTheme } from "@stackframe/stack";
 import { stackServerApp } from "../stack";
 import { inter } from '@/app/ui/font';
@@ -35,10 +34,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.className} ${geistMono.variable} antialiased`}
-      ><StackProvider app={stackServerApp}><StackTheme>
+      >
+        <StackProvider app={stackServerApp}><StackTheme>
         {children}
         <Toaster richColors />
-      </StackTheme></StackProvider></body>
+      </StackTheme></StackProvider>
+      </body>
     </html>
   );
 }

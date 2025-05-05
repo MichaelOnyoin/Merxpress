@@ -1,0 +1,26 @@
+# GitHub workflow for CodeQL security scanning
+name: CodeQL
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  analyze:
+    name: Analyze code with CodeQL
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Initialize the CodeQL scanning tools
+      - name: Set up CodeQL
+        uses: github/codeql-action/init@v2
+
+      # Run the analysis and generate results
+      - name: Analyze code
+        uses: github/codeql-action/analyze@v2

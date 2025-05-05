@@ -1,4 +1,4 @@
-
+'use client'
 import { Header } from "@/components/Header";
 import { Page } from "@/components/Hero1";
 import { MerxLayout } from "@/components/merxDash/";
