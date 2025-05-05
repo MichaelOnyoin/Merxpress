@@ -1,0 +1,20 @@
+# Automated security scanning with OWASP ZAP
+name: ZAP Scan
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  zap-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Run the ZAP security scan against deployed application
+      - name: Run ZAP security scan
+        uses: zaproxy/action-full-scan@v0.3.0
+        with:
+          target: 'https://merxpress-seven.vercel.app/'  # URL to scan
