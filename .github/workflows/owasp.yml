@@ -19,8 +19,8 @@ jobs:
 
       # Initialize the CodeQL scanning tools
       - name: Set up CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
 
       # Run the analysis and generate results
       - name: Analyze code
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
